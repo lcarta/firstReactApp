@@ -1,0 +1,28 @@
+.difficultChoose {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+
+.difficultSelector {
+  border: 0.5px solid #52b788;
+  border-radius: 2px;
+  background-color: transparent;
+  color: #52b788;
+
+  &:hover {
+    transition: 0.5s;
+    background-color: #52b788;
+    color: #081c15;
+    box-shadow: 0em 0em 1em 0px #d8f3dc;
+  }
+
+  option {
+    &:hover {
+      background-color: #52b788;
+      color: #081c15;
+      box-shadow: 0em 0em 1em 0px #d8f3dc;
+    }
+  }
+}
