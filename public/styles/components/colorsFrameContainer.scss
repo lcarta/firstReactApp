@@ -1,0 +1,10 @@
+.colorsFrameContainer {
+  margin: 5%;
+  border: 0.5px solid #52b788;
+  border-radius: 15px;
+  box-shadow: 0em 0em 1em 0px #d8f3dc;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}

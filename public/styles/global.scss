@@ -1,5 +1,9 @@
+@import './components/components.scss';
+@import './variables/variables.scss';
+
 html,
 body {
+  background-color: $dark-background-color;
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -7,7 +11,43 @@ body {
   font-size: 1rem;
   overflow-x: hidden;
 
-  h1 {
-    margin: 0;
+  p {
+    color: $color-light-green;
+    text-align: center;
   }
+
+  header {
+    color: $color-light-green;
+    background-color: $color-header;
+    border-bottom: 1px solid $color-light-green;
+  }
+}
+
+.playerStatus {
+  color: $color-light-green;
+  background-color: $color-mid-dark-green;
+}
+
+.startGameButton {
+  color: $color-mid-light-green;
+
+
+  &:hover {
+    transition: 0.5s;
+    background-color: $color-mid-light-green;
+    color: $color-header;
+    box-shadow: 0em 0em 1em 0px #d8f3dc;
+  }
+
+  &:active {
+    transition: 0.2s;
+    background-color: $color-mid-light-green;
+    color: $color-header;
+    box-shadow: 0em 0em 0.2em 0px #d8f3dc;
+  }
+}
+
+.one {
+  grid-column: 1 / 3;
+  grid-row: 1;
 }
