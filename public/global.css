@@ -28,7 +28,7 @@ h1 {
   justify-content: center; }
 
 .colorsFrameContainer {
-  margin: 5%;
+  margin: 10px 30% 0 30%;
   border: 0.5px solid #52b788;
   border-radius: 15px;
   box-shadow: 0em 0em 1em 0px #d8f3dc;
@@ -36,6 +36,60 @@ h1 {
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   grid-auto-rows: minmax(100px, auto); }
+
+.color0 {
+  margin: 3px;
+  border-radius: 15px;
+  grid-column: 1;
+  grid-row: 1; }
+
+.color1 {
+  margin: 3px;
+  border-radius: 15px;
+  grid-column: 2;
+  grid-row: 1; }
+
+.color2 {
+  margin: 3px;
+  border-radius: 15px;
+  grid-column: 3;
+  grid-row: 1; }
+
+.color3 {
+  margin: 3px;
+  border-radius: 15px;
+  grid-column: 1;
+  grid-row: 2; }
+
+.color4 {
+  margin: 3px;
+  border-radius: 15px;
+  grid-column: 2;
+  grid-row: 2; }
+
+.color5 {
+  margin: 3px;
+  border-radius: 15px;
+  grid-column: 3;
+  grid-row: 2; }
+
+.color6 {
+  margin: 3px;
+  border-radius: 15px;
+  grid-column: 1;
+  grid-row: 3; }
+
+.color7 {
+  margin: 3px;
+  border-radius: 15px;
+  grid-column: 2;
+  grid-row: 3; }
+
+.color8 {
+  margin: 3px;
+  border-radius: 15px;
+  grid-column: 3;
+  grid-row: 3; }
 
 .colorContainer {
   display: none;
