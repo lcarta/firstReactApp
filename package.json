@@ -1,5 +1,5 @@
 {
-  "name": "learn-template",
+  "name": "guess-the-color-game",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -17,7 +17,7 @@
     "format": "npm run prettier:fix && npm run lint:fix"
   },
   "keywords": [],
-  "author": "Manuel Caria",
+  "author": "Luca Carta",
   "license": "ISC",
   "dependencies": {
     "concurrently": "^7.6.0",
