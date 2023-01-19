@@ -1,6 +1,7 @@
 .playerStatus {
   display: flex;
   justify-content: flex-end;
-  padding-right: 5%; }
+  padding-right: 5%;
+  display: none; }
   .playerStatus p {
-    display: none; }
+    margin: 0; }

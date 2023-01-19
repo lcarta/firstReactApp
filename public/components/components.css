@@ -8,9 +8,10 @@ h1 {
 .playerStatus {
   display: flex;
   justify-content: flex-end;
-  padding-right: 5%; }
+  padding-right: 5%;
+  display: none; }
   .playerStatus p {
-    display: none; }
+    margin: 0; }
 
 .startGameButton {
   padding: 10px 30px !important;
@@ -37,7 +38,10 @@ h1 {
   grid-auto-rows: minmax(100px, auto); }
 
 .colorContainer {
-  display: none; }
+  display: none;
+  justify-content: center; }
 
 .multipleColorsContainer {
-  display: none; }
+  display: none;
+  justify-content: center;
+  flex-direction: column; }

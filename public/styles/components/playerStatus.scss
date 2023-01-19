@@ -2,8 +2,9 @@
   display: flex;
   justify-content: flex-end;
   padding-right: 5%;
+  display: none;
 
   p {
-    display: none;
+    margin: 0;
   }
 }
