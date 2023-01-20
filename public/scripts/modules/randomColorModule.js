@@ -1,26 +1,30 @@
-import { rand, randomGenerator } from "./randomGenerator.js";
-
-
-export const randomColor = (color) => {
-  randomGenerator();
-  return color.innerText = `rgb(${rand.r}, ${rand.g}, ${rand.b})`
-}
+import { rand, randomGenerator, casualNumber, casual } from "./randomGenerator.js";
 
 const difficultSelector = document.querySelector('.difficultSelector');
 const colorsFrameContainer = document.querySelector('.colorsFrameContainer');
+let casualColor;
+
+export const randomColor = (color) => {
+  randomGenerator();
+  casualColor = `rgb(${rand.r}, ${rand.g}, ${rand.b})`;
+  return color.innerText = casualColor;
+}
+
 
 export const multipleRandomColor = () => {
   const n = difficultSelector.value;
+  console.log(n)
   for (let i = 0; i < n; i++) {
     randomGenerator();
-    console.log(rand);
-    let divw = document.createElement('div');
-    //div.className = 'one';
+    let divColor = document.createElement('div');
     const tagClass = `color${i}`;
-    divw.classList.add(tagClass);
-    colorsFrameContainer.appendChild(divw);
-    const colorl = document.querySelector('.color1');
-    console.log(divw)
-    divw.style.backgroundColor = `rgb(${rand.r}, ${rand.g}, ${rand.b})`
+    divColor.classList.add(tagClass);
+    colorsFrameContainer.appendChild(divColor);
+    divColor.style.backgroundColor = `rgb(${rand.r}, ${rand.g}, ${rand.b})`
   }
+  casualNumber();
+  const tagClass = `color${casual}`;
+  const selectFrame = document.querySelector(`.${tagClass}`);
+  selectFrame.style.backgroundColor = casualColor
+  console.log(selectFrame)
 }

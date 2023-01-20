@@ -1,12 +1,13 @@
-import { sayHello } from './modules/sampleModule.js';
 import { startTemplate } from './modules/startGameModule.js';
-import { randomGenerator } from './modules/randomGenerator.js';
 import { randomColor } from './modules/randomColorModule.js';
 import { multipleRandomColor } from './modules/randomColorModule.js';
 
-window.onload = sayHello();
-const myRandomcolor = document.querySelector('.myRandomcolor')
+
+const myRandomcolor = document.querySelector('.myRandomcolor');
+const difficultSelector = document.querySelector('.difficultSelector');
+
 const startgame = () => {
+  difficultSelector.disabled = 'true'
   startTemplate();
   randomColor(myRandomcolor);
   multipleRandomColor();

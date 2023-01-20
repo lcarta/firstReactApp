@@ -31,6 +31,7 @@ h1 {
   margin: 10px 30% 0 30%;
   border: 0.5px solid #52b788;
   border-radius: 15px;
+  padding: 8px;
   box-shadow: 0em 0em 1em 0px #d8f3dc;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -41,55 +42,82 @@ h1 {
   margin: 3px;
   border-radius: 15px;
   grid-column: 1;
-  grid-row: 1; }
+  grid-row: 1;
+  cursor: pointer; }
+  .color0:hover {
+    transform: translateY(-0.25em); }
 
 .color1 {
   margin: 3px;
   border-radius: 15px;
   grid-column: 2;
-  grid-row: 1; }
+  grid-row: 1;
+  cursor: pointer; }
+  .color1:hover {
+    transform: translateY(-0.25em); }
 
 .color2 {
   margin: 3px;
   border-radius: 15px;
   grid-column: 3;
-  grid-row: 1; }
+  grid-row: 1;
+  cursor: pointer; }
+  .color2:hover {
+    transform: translateY(-0.25em); }
 
 .color3 {
   margin: 3px;
   border-radius: 15px;
   grid-column: 1;
-  grid-row: 2; }
+  grid-row: 2;
+  cursor: pointer; }
+  .color3:hover {
+    transform: translateY(-0.25em); }
 
 .color4 {
   margin: 3px;
   border-radius: 15px;
   grid-column: 2;
-  grid-row: 2; }
+  grid-row: 2;
+  cursor: pointer; }
+  .color4:hover {
+    transform: translateY(-0.25em); }
 
 .color5 {
   margin: 3px;
   border-radius: 15px;
   grid-column: 3;
-  grid-row: 2; }
+  grid-row: 2;
+  cursor: pointer; }
+  .color5:hover {
+    transform: translateY(-0.25em); }
 
 .color6 {
   margin: 3px;
   border-radius: 15px;
   grid-column: 1;
-  grid-row: 3; }
+  grid-row: 3;
+  cursor: pointer; }
+  .color6:hover {
+    transform: translateY(-0.25em); }
 
 .color7 {
   margin: 3px;
   border-radius: 15px;
   grid-column: 2;
-  grid-row: 3; }
+  grid-row: 3;
+  cursor: pointer; }
+  .color7:hover {
+    transform: translateY(-0.25em); }
 
 .color8 {
   margin: 3px;
   border-radius: 15px;
   grid-column: 3;
-  grid-row: 3; }
+  grid-row: 3;
+  cursor: pointer; }
+  .color8:hover {
+    transform: translateY(-0.25em); }
 
 .colorContainer {
   display: none;
@@ -117,8 +145,18 @@ h1 {
     box-shadow: 0em 0em 1em 0px #d8f3dc; }
   .difficultSelector option:hover {
     background-color: #52b788;
-    color: #081c15;
-    box-shadow: 0em 0em 1em 0px #d8f3dc; }
+    color: #081c15; }
+
+.difficultSelector[disabled] {
+  border: 0.5px solid #52b788;
+  border-radius: 2px;
+  background-color: transparent;
+  color: #52b788; }
+  .difficultSelector[disabled]:hover {
+    border: 0.5px solid #52b788;
+    background-color: transparent;
+    color: #52b788;
+    box-shadow: none; }
 
 html,
 body {

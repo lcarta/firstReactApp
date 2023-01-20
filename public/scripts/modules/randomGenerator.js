@@ -4,6 +4,8 @@ let rand = {
   b: 0
 }
 
+const difficultSelector = document.querySelector('.difficultSelector');
+let casual;
 
 export const randomGenerator = () => {
   for (let i = 0; i <= 2; i++) {
@@ -14,4 +16,9 @@ export const randomGenerator = () => {
   return rand
 }
 
-export { rand }
+export const casualNumber = () => {
+  casual = (Math.floor(Math.random() * (difficultSelector.value)));
+  return casual;
+}
+
+export { rand, casual }
