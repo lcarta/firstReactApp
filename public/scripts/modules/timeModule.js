@@ -1,4 +1,4 @@
-import { scoreCounter } from "./scoreModule.js";
+
 
 export const time = {
   increment: 0,
@@ -7,6 +7,8 @@ export const time = {
   milliseconds: 0,
   seconds: 0
 }
+const startButton = document.querySelector('.startGameButton');
+const resetButton = document.querySelector('.resetGameButton');
 
 const timeContainer = document.querySelector('.timeContainer');
 console.log(timeContainer.style)
@@ -29,4 +31,14 @@ export const reset = () => {
   const score = document.querySelector('.score');
   score.innerHTML = `Score: 0`;
   time.increment = 0;
+}
+
+
+export const wrong = () => {
+  cancelAnimationFrame(timeProvider);
+  timeContainer.innerHTML = 'Time: 20.00';
+  time.increment = 0;
+  startButton.style.display = 'none';
+  resetButton.style.display = 'block';
+  timeProvider
 }
