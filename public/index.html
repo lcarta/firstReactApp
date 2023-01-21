@@ -5,6 +5,7 @@
   <title>Practice Template</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="/public/global.css" type="text/css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="/public/scripts/main.js" type="module"></script>
 </head>
 
@@ -13,7 +14,9 @@
     <h1>Guess the color game</h1>
   </header>
   <div class="playerStatus">
-    <p>Your life: <span class="lifeviewer">3</span></p>
+    <p class="life">Life: <span class="lifeviewer">3</p>
+    <p class="score">Score:</p>
+    <p class="timeContainer">Time: 11.59</p>
   </div>
   <div class="difficultChoose">
     <select class="difficultSelector">
@@ -22,7 +25,9 @@
       <option class="selector" value="9">Hard</option>
     </select>
   </div>
-  <div class="buttonContainer"><button class="startGameButton">Play</button>
+  <div class="buttonContainer">
+    <button class="gameButton startGameButton">Play</button>
+    <button class="gameButton resetGameButton" style="display:none">Reset</button>
   </div>
   <div class="colorContainer">
     <p>Guess the color: <span class="myRandomcolor"></span></p>

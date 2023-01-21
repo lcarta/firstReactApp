@@ -2,7 +2,7 @@ import { rand, randomGenerator, casualNumber, casual } from "./randomGenerator.j
 
 const difficultSelector = document.querySelector('.difficultSelector');
 const colorsFrameContainer = document.querySelector('.colorsFrameContainer');
-let casualColor;
+export let casualColor;
 
 export const randomColor = (color) => {
   randomGenerator();
@@ -13,11 +13,11 @@ export const randomColor = (color) => {
 
 export const multipleRandomColor = () => {
   const n = difficultSelector.value;
-  console.log(n)
   for (let i = 0; i < n; i++) {
     randomGenerator();
     let divColor = document.createElement('div');
     const tagClass = `color${i}`;
+    divColor.classList.add('colorPanel');
     divColor.classList.add(tagClass);
     colorsFrameContainer.appendChild(divColor);
     divColor.style.backgroundColor = `rgb(${rand.r}, ${rand.g}, ${rand.b})`
@@ -26,5 +26,4 @@ export const multipleRandomColor = () => {
   const tagClass = `color${casual}`;
   const selectFrame = document.querySelector(`.${tagClass}`);
   selectFrame.style.backgroundColor = casualColor
-  console.log(selectFrame)
 }

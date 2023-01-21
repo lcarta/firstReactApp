@@ -1,7 +1,13 @@
 .playerStatus {
   display: flex;
-  justify-content: flex-end;
-  padding-right: 5%;
-  display: none; }
+  flex-direction: column;
+  right: 400px;
+  display: none;
+  position: absolute; }
   .playerStatus p {
     margin: 0; }
+  .playerStatus .timeContainer {
+    color: #52b788;
+    padding-top: 22px;
+    font-size: larger;
+    font-weight: 100; }

@@ -1,10 +1,19 @@
 .playerStatus {
   display: flex;
-  justify-content: flex-end;
-  padding-right: 5%;
+  flex-direction: column;
+  right: 400px;
   display: none;
+  position: absolute;
 
   p {
     margin: 0;
+  }
+
+
+  .timeContainer {
+    color: #52b788;
+    padding-top: 22px;
+    font-size: larger;
+    font-weight: 100;
   }
 }

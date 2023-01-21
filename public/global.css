@@ -7,13 +7,19 @@ h1 {
 
 .playerStatus {
   display: flex;
-  justify-content: flex-end;
-  padding-right: 5%;
-  display: none; }
+  flex-direction: column;
+  right: 400px;
+  display: none;
+  position: absolute; }
   .playerStatus p {
     margin: 0; }
+  .playerStatus .timeContainer {
+    color: #52b788;
+    padding-top: 22px;
+    font-size: larger;
+    font-weight: 100; }
 
-.startGameButton {
+.gameButton {
   padding: 10px 30px !important;
   background-color: transparent;
   width: auto;
@@ -178,8 +184,7 @@ body {
     border-bottom: 1px solid #b7e4c7; }
 
 .playerStatus {
-  color: #b7e4c7;
-  background-color: #1b4332; }
+  color: #b7e4c7; }
 
 .startGameButton {
   color: #52b788; }
@@ -193,6 +198,19 @@ body {
     background-color: #52b788;
     color: #081c15;
     box-shadow: 0em 0em 0.2em 0px #d8f3dc; }
+
+.resetGameButton {
+  color: #c9184a; }
+  .resetGameButton:hover {
+    transition: 0.5s;
+    background-color: #c9184a;
+    color: #081c15;
+    box-shadow: 0em 0em 1em 0px #ffccd5; }
+  .resetGameButton:active {
+    transition: 0.2s;
+    background-color: #c9184a;
+    color: #081c15;
+    box-shadow: 0em 0em 0.2em 0px #ffccd5; }
 
 .one {
   grid-column: 1 / 3;

@@ -25,7 +25,6 @@ body {
 
 .playerStatus {
   color: $color-light-green;
-  background-color: $color-mid-dark-green;
 }
 
 .startGameButton {
@@ -44,6 +43,25 @@ body {
     background-color: $color-mid-light-green;
     color: $color-header;
     box-shadow: 0em 0em 0.2em 0px #d8f3dc;
+  }
+}
+
+.resetGameButton {
+  color: $color-mid-light-red;
+
+
+  &:hover {
+    transition: 0.5s;
+    background-color: $color-mid-light-red;
+    color: $color-header;
+    box-shadow: 0em 0em 1em 0px $color-light-red;
+  }
+
+  &:active {
+    transition: 0.2s;
+    background-color: $color-mid-light-red;
+    color: $color-header;
+    box-shadow: 0em 0em 0.2em 0px $color-light-red;
   }
 }
 
