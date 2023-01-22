@@ -16,7 +16,6 @@ export const startTemplate = () => {
   multipleColorsContainer.style.display = 'flex';
 }
 
-
 export const resetTemplate = () => {
   const difficultSelector = document.querySelector('.difficultSelector');
   let n = difficultSelector.value;

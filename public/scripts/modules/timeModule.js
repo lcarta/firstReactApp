@@ -1,5 +1,3 @@
-
-
 export const time = {
   increment: 0,
   startTime: 1999,
@@ -29,7 +27,7 @@ export const reset = () => {
   cancelAnimationFrame(timeProvider);
   timeContainer.innerHTML = 'Time: 20.00';
   const score = document.querySelector('.score');
-  score.innerHTML = `Score: 0`;
+  score.innerHTML = 'Score: 0';
   time.increment = 0;
 }
 
