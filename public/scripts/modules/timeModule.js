@@ -5,11 +5,7 @@ export const time = {
   milliseconds: 0,
   seconds: 0
 }
-const startButton = document.querySelector('.startGameButton');
-const resetButton = document.querySelector('.resetGameButton');
-
 const timeContainer = document.querySelector('.timeContainer');
-console.log(timeContainer.style)
 export let timeProvider;
 
 export const timeCounter = () => {
@@ -21,7 +17,6 @@ export const timeCounter = () => {
   timeProvider = requestAnimationFrame(timeCounter);
   if (time.seconds == 0) { cancelAnimationFrame(timeProvider) }
 }
-
 
 export const reset = () => {
   cancelAnimationFrame(timeProvider);

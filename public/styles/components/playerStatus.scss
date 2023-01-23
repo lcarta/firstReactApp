@@ -6,14 +6,25 @@
   position: absolute;
 
   p {
+    font-size: larger;
     margin: 0;
   }
 
+  .lifeContainer {
+    display: flex;
+    align-items: center;
+
+    span {
+      color: #c9184a;
+    }
+  }
+
+  .score {
+    display: flex;
+  }
 
   .timeContainer {
-    color: #52b788;
+    display: flex;
     padding-top: 22px;
-    font-size: larger;
-    font-weight: 100;
   }
 }

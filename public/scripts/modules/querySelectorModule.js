@@ -1,0 +1,12 @@
+export const difficultSelector = document.querySelector('.difficultSelector');
+export const colorsPanelsContainer = document.querySelector('.colorsPanelsContainer');
+export const myRandomcolor = document.querySelector('.myRandomcolor');
+export const playerStatus = document.querySelector('.playerStatus');
+export const colorContainer = document.querySelector('.colorContainer');
+export const multipleColorsContainer = document.querySelector('.multipleColorsContainer');
+export const score = document.querySelector('.score');
+export const lifeContainer = document.querySelector('.lifeContainer');
+export const heartLife = document.querySelector('.material-symbols-outlined');
+export const startButton = document.querySelector('.startGameButton');
+export const resetButton = document.querySelector('.resetGameButton');
+export const panel = document.querySelector('.panel');

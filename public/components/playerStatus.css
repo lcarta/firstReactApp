@@ -5,9 +5,15 @@
   display: none;
   position: absolute; }
   .playerStatus p {
-    margin: 0; }
-  .playerStatus .timeContainer {
-    color: #52b788;
-    padding-top: 22px;
     font-size: larger;
-    font-weight: 100; }
+    margin: 0; }
+  .playerStatus .lifeContainer {
+    display: flex;
+    align-items: center; }
+    .playerStatus .lifeContainer span {
+      color: #c9184a; }
+  .playerStatus .score {
+    display: flex; }
+  .playerStatus .timeContainer {
+    display: flex;
+    padding-top: 22px; }

@@ -1,31 +1,27 @@
-export const startTemplate = () => {
+import { difficultSelector } from "./querySelectorModule.js";
+import { lifeGenerator } from "./lifeModule.js";
+import { playerStatus, colorContainer, multipleColorsContainer } from "./querySelectorModule.js";
+
+const colorPanelsRemove = () => {
   if (document.querySelector('.color0')) {
-    const difficultSelector = document.querySelector('.difficultSelector');
-    let n = difficultSelector.value;
-    for (let i = 0; i < n; i++) {
-      const tagClass = `color${i}`;
-      const frame = document.querySelector(`.${tagClass}`);
-      frame.remove();
+    for (let i = 0; i < difficultSelector.value; i++) {
+      document.querySelector(`.color${i}`).remove();
     }
   }
-  const playerStatus = document.querySelector('.playerStatus')
+}
+
+export const startTemplate = () => {
+  colorPanelsRemove();
   playerStatus.style.display = 'flex';
-  const colorContainer = document.querySelector('.colorContainer')
   colorContainer.style.display = 'flex';
-  const multipleColorsContainer = document.querySelector('.multipleColorsContainer')
   multipleColorsContainer.style.display = 'flex';
+  lifeGenerator();
 }
 
 export const resetTemplate = () => {
-  const difficultSelector = document.querySelector('.difficultSelector');
-  let n = difficultSelector.value;
-  for (let i = 0; i < n; i++) {
-    const tagClass = `color${i}`;
-    const frame = document.querySelector(`.${tagClass}`);
-    frame.remove();
-  }
-  const colorContainer = document.querySelector('.colorContainer')
+  colorPanelsRemove();
   colorContainer.style.display = 'none';
-  const multipleColorsContainer = document.querySelector('.multipleColorsContainer')
   multipleColorsContainer.style.display = 'none';
+  lifeGenerator();
 }
+
