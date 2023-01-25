@@ -1,12 +1,12 @@
 .playerStatus {
-  display: flex;
+  display: none;
   flex-direction: column;
   right: 400px;
-  display: none;
   position: absolute;
+  width: 120px;
 
   p {
-    font-size: larger;
+    font-size: large;
     margin: 0;
   }
 
@@ -16,10 +16,15 @@
 
     span {
       color: #c9184a;
+      font-size: medium;
     }
   }
 
   .score {
+    display: flex;
+  }
+
+  .record {
     display: flex;
   }
 

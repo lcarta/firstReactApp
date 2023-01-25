@@ -6,6 +6,7 @@ export const playerStatus = document.querySelector('.playerStatus');
 export const colorContainer = document.querySelector('.colorContainer');
 export const multipleColorsContainer = document.querySelector('.multipleColorsContainer');
 export const score = document.querySelector('.score');
+export const record = document.querySelector('.record');
 export const lifeContainer = document.querySelector('.lifeContainer');
 export const startButton = document.querySelector('.startGameButton');
 export const resetButton = document.querySelector('.resetGameButton');

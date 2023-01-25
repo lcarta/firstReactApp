@@ -1,4 +1,4 @@
-import { startTemplate, resetTemplate } from './modules/gameTemplateModule.js';
+import { startTemplate, resetTemplate, recordInnerTEXT } from './modules/gameTemplateModule.js';
 import { panelsRandomColor } from './modules/randomColorModule.js';
 import { timeCounter, reset } from './modules/timeModule.js';
 import { difficultSelector, startButton, resetButton } from './modules/querySelectorModule.js';
@@ -26,3 +26,4 @@ const resetGame = () => {
 
 startButton.addEventListener('click', startGame);
 resetButton.addEventListener('click', resetGame);
+difficultSelector.addEventListener('change', recordInnerTEXT)

@@ -1,18 +1,21 @@
 .playerStatus {
-  display: flex;
+  display: none;
   flex-direction: column;
   right: 400px;
-  display: none;
-  position: absolute; }
+  position: absolute;
+  width: 120px; }
   .playerStatus p {
-    font-size: larger;
+    font-size: large;
     margin: 0; }
   .playerStatus .lifeContainer {
     display: flex;
     align-items: center; }
     .playerStatus .lifeContainer span {
-      color: #c9184a; }
+      color: #c9184a;
+      font-size: medium; }
   .playerStatus .score {
+    display: flex; }
+  .playerStatus .record {
     display: flex; }
   .playerStatus .timeContainer {
     display: flex;
