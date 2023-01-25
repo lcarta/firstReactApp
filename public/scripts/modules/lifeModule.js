@@ -1,27 +1,24 @@
 
 import { gameVariables } from "./gameVariables.js";
-import { heartLife, lifeContainer } from "./querySelectorModule.js";
-
+import { lifeContainer } from "./querySelectorModule.js";
+import { gameOverTemplate } from "./gameTemplateModule.js";
 
 export const lifeGenerator = () => {
-  for (let i = 0; i < gameVariables.life - document.querySelectorAll('.material-symbols-outlined').length; i++) {
+  const heartLife = document.querySelectorAll('.material-symbols-outlined');
+  for (let i = 0; i < gameVariables.life - heartLife.length; i++) {
     let newLife = document.createElement('span');
     newLife.classList.add('material-symbols-outlined');
     newLife.innerText = 'favorite';
     lifeContainer.appendChild(newLife);
   }
-
 }
 
 export const lifeRemove = () => {
-  console.log('wrong')
-  if (document.querySelectorAll('.material-symbols-outlined').length > 0) {
+  if (document.querySelectorAll('.material-symbols-outlined').length > 1) {
     document.querySelector('.material-symbols-outlined').remove();
   } else {
-    let lostH1 = document.createElement('h1');
-    lostH1.classList.add('lostH1');
-    lostH1.innerText = 'favorite';
-    lifeContainer.appendChild(lostH1);
+    document.querySelector('.material-symbols-outlined').remove();
+    gameOverTemplate();
+    gameVariables.life = 3;
   }
-
 }

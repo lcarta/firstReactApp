@@ -1,23 +1,28 @@
-import { time } from "./timeModule.js";
 import { myRandomcolor } from "./querySelectorModule.js";
 import { clickedColor } from "./randomColorModule.js";
 import { score } from "./querySelectorModule.js";
 import { lifeRemove } from "./lifeModule.js";
+import { gameVariables } from "./gameVariables.js";
+import { panelsRandomColor } from "./randomColorModule.js";
+import { colorPanelsRemove, clickTemplate } from "./gameTemplateModule.js";
+import { gameWinner } from "./timeModule.js";
 
+const isRightColor = () => {
+  gameVariables.score = (gameVariables.score + parseInt(gameVariables.milliseconds));
+  score.innerHTML = `Score: ${gameVariables.score}`;
+  clickTemplate('#1b4332', 60);
+  gameWinner(gameVariables.score);
+  colorPanelsRemove();
+  panelsRandomColor();
+}
 
-let scoreValue = 0;
+const isWrongColor = () => {
+  lifeRemove();
+  clickTemplate('#641220', 200);
+}
 
 export const scoreCounter = () => {
   if (clickedColor == myRandomcolor.innerHTML) {
     isRightColor();
   } else isWrongColor();
-}
-
-const isRightColor = () => {
-  scoreValue += (time.score - parseInt(time.increment * 100 / 60))
-  score.innerHTML = `Score: ${scoreValue}`;
-}
-
-const isWrongColor = () => {
-  lifeRemove();
 }

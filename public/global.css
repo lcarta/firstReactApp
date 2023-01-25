@@ -34,6 +34,19 @@ h1 {
   border: 1px solid;
   cursor: pointer; }
 
+.startGameButton {
+  color: #52b788; }
+  .startGameButton:hover {
+    transition: 0.5s;
+    background-color: #52b788;
+    color: #081c15;
+    box-shadow: 0em 0em 1em 0px #d8f3dc; }
+  .startGameButton:active {
+    transition: 0.2s;
+    background-color: #52b788;
+    color: #081c15;
+    box-shadow: 0em 0em 0.2em 0px #d8f3dc; }
+
 .buttonContainer {
   padding-top: 20px;
   display: flex;
@@ -134,6 +147,10 @@ h1 {
 .colorContainer {
   display: none;
   justify-content: center; }
+  .colorContainer .gameOverH1 {
+    padding-top: 10px;
+    color: #c9184a;
+    font-size: xx-large; }
 
 .multipleColorsContainer {
   display: none;
@@ -191,19 +208,6 @@ body {
 
 .playerStatus {
   color: #b7e4c7; }
-
-.startGameButton {
-  color: #52b788; }
-  .startGameButton:hover {
-    transition: 0.5s;
-    background-color: #52b788;
-    color: #081c15;
-    box-shadow: 0em 0em 1em 0px #d8f3dc; }
-  .startGameButton:active {
-    transition: 0.2s;
-    background-color: #52b788;
-    color: #081c15;
-    box-shadow: 0em 0em 0.2em 0px #d8f3dc; }
 
 .resetGameButton {
   color: #c9184a; }

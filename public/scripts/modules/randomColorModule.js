@@ -1,4 +1,4 @@
-import { myRandomcolor, difficultSelector, colorsPanelsContainer } from "./querySelectorModule.js";
+import { difficultSelector, colorsPanelsContainer, myRandomcolor } from "./querySelectorModule.js";
 import { randomColorGenerator, casualNumber } from "./randomGeneratorModule.js";
 import { scoreCounter } from "./scoreModule.js";
 
@@ -9,14 +9,12 @@ export const panelsRandomColor = () => {
   for (let i = 0; i < difficultSelector.value; i++) {
     randomColorGenerator();
     let divColor = document.createElement('div');
-    const tagClass = `color${i}`;
-    divColor.classList.add(tagClass);
-    divColor.classList.add('panel');
-    colorsPanelsContainer.appendChild(divColor);
+    divColor.classList.add(`color${i}`);
     divColor.style.backgroundColor = randomColorGenerator();
+    colorsPanelsContainer.appendChild(divColor);
     divColor.addEventListener('click', function () {
       clickedColor = divColor.style.backgroundColor;
-      scoreCounter()
+      scoreCounter();
     });
   }
   myRandomcolor.innerText = document.querySelector(casualNumber()).style.backgroundColor;

@@ -1,37 +1,39 @@
-export const time = {
-  increment: 0,
-  startTime: 1999,
-  score: 1999,
-  milliseconds: 0,
-  seconds: 0
-}
-const timeContainer = document.querySelector('.timeContainer');
+import { gameVariables } from "./gameVariables.js";
+import { score, timeContainer } from "./querySelectorModule.js";
+import { lifeRemove } from "./lifeModule.js";
+import { clickTemplate } from "./gameTemplateModule.js";
+
 export let timeProvider;
 
 export const timeCounter = () => {
-  time.milliseconds = String((time.startTime - parseInt(time.increment * 100 / 60)) % 99).padStart(2, '0');
-  time.seconds = String((time.startTime - parseInt(time.increment / 60)) % 20).padStart(2, '0');
-  timeContainer.innerHTML = `Time: ${time.seconds}.${time.milliseconds}`;
-  time.increment += 1;
-  if (time.seconds <= 5) { timeContainer.style.color = '#c9184a' };
+  gameVariables.increment++;
+  gameVariables.milliseconds = parseInt(gameVariables.startTime - gameVariables.increment * 100 / 60);
+  gameVariables.seconds = parseInt(gameVariables.startTime / 100 - gameVariables.increment / 60);
+  timeContainer.innerHTML = `Time: ${String((gameVariables.seconds) % 20).padStart(2, '0')}.${String((gameVariables.milliseconds) % 99).padStart(2, '0')}`;
+  if (gameVariables.seconds <= 5) { timeContainer.style.color = '#c9184a' };
   timeProvider = requestAnimationFrame(timeCounter);
-  if (time.seconds == 0) { cancelAnimationFrame(timeProvider) }
+  if (gameVariables.milliseconds == 0) {
+    clickTemplate('#641220', 200);
+    lifeRemove();
+    gameVariables.milliseconds = 0;
+    gameVariables.increment = 0;
+    timeContainer.style.color = '#b7e4c7'
+  }
 }
 
-export const reset = () => {
-  cancelAnimationFrame(timeProvider);
-  timeContainer.innerHTML = 'Time: 20.00';
-  const score = document.querySelector('.score');
-  score.innerHTML = 'Score: 0';
-  time.increment = 0;
+export const gameWinner = (value) => {
+  gameVariables.milliseconds = 0;
+  gameVariables.increment = 0;
+  timeContainer.style.color = '#b7e4c7'
+  score.innerHTML = `Score: ${value}`;
 }
 
-
-export const wrong = () => {
+export const reset = (value = 0) => {
   cancelAnimationFrame(timeProvider);
+  gameVariables.milliseconds = 0;
+  gameVariables.score = 0;
+  gameVariables.increment = 0;
+  timeContainer.style.color = '#b7e4c7'
   timeContainer.innerHTML = 'Time: 20.00';
-  time.increment = 0;
-  startButton.style.display = 'none';
-  resetButton.style.display = 'block';
-  timeProvider
+  score.innerHTML = `Score: ${value}`;
 }
