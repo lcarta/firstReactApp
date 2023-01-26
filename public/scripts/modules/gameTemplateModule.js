@@ -12,7 +12,7 @@ export const colorPanelsRemove = () => {
 }
 
 export const startTemplate = () => {
-  recordInnerTEXT();
+  recordInnerTEXT(difficultSelector.options[difficultSelector.selectedIndex].text);
   colorPanelsRemove();
   timeContainer.style.display = 'flex';
   playerStatus.style.display = 'flex';
@@ -46,16 +46,6 @@ export const clickTemplate = (color, time) => {
   setTimeout(function bodyColor() { body.style.backgroundColor = '#081c15' }, time);
 }
 
-export const recordInnerTEXT = () => {
-  switch (difficultSelector.value) {
-    case '3':
-      record.innerHTML = `Record: ${gameVariables.record.easy}`;
-      break;
-    case '6':
-      record.innerHTML = `Record: ${gameVariables.record.medium}`;
-      break;
-    case '9':
-      record.innerHTML = `Record: ${gameVariables.record.hard}`;
-      break;
-  }
+export const recordInnerTEXT = (level) => {
+  record.innerHTML = `Record: ${gameVariables.record[level.toLowerCase()].value}`;
 }

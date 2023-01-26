@@ -26,4 +26,4 @@ const resetGame = () => {
 
 startButton.addEventListener('click', startGame);
 resetButton.addEventListener('click', resetGame);
-difficultSelector.addEventListener('change', recordInnerTEXT)
+difficultSelector.addEventListener('change', recordInnerTEXT(difficultSelector.options[difficultSelector.selectedIndex].text));
